@@ -1,0 +1,246 @@
+/* ============================================================
+   Gaming House — Hoja de estilos Semana 6 (tema sobre Bootstrap 5)
+   Autor: Felipe Gennari — PFY2201 Desarrollo Frontend I
+   Este CSS solo personaliza colores y detalles visuales;
+   todo el layout responsivo lo entrega Bootstrap 5.
+   ============================================================ */
+
+/* ---------- Variables CSS (custom properties) ---------- */
+:root {
+    --color-fondo: #0d0d17;
+    --color-superficie: #1a1a2e;
+    --color-acento: #7c3aed;
+    --color-acento-2: #22d3ee;
+    --color-texto: #e5e5f0;
+    --color-texto-suave: #a0a0b8;
+}
+
+/* ---------- Base de la página ---------- */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ---------- Foco visible (accesibilidad por teclado) ----------
+   Outline claro en todos los controles interactivos para que la
+   navegación con teclado permita reconocer el elemento activo. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.btn:focus-visible,
+.navbar-gamer .nav-link:focus-visible,
+.navbar-toggler:focus-visible,
+.dropdown-item:focus-visible,
+.carousel-control-prev:focus-visible,
+.carousel-control-next:focus-visible,
+.carousel-indicators button:focus-visible {
+    outline: 3px solid var(--color-acento-2);
+    outline-offset: 2px;
+}
+
+/* El outline cyan sobre fondo cyan sería invisible:
+   en esos casos se usa el color de fondo oscuro como contraste. */
+.navbar-gamer .nav-link:focus-visible,
+.btn-gamer:focus-visible {
+    outline-color: var(--color-fondo);
+}
+
+/* ---------- Encabezado ---------- */
+#inicio {
+    background-color: var(--color-superficie);
+    border-bottom: 4px solid var(--color-acento);
+}
+
+#inicio p {
+    color: var(--color-texto-suave);
+    font-size: 1.1rem;
+}
+
+/* Logo: responsivo, usa todo el ancho disponible hasta un tope de 550px */
+.logo {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-gamer {
+    background-color: var(--color-acento);
+}
+
+.navbar-gamer .nav-link {
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Efecto al pasar el mouse sobre los enlaces del menú */
+.navbar-gamer .nav-link:hover,
+.navbar-gamer .nav-link:focus {
+    background-color: var(--color-acento-2);
+    color: var(--color-fondo);
+}
+
+/* Menú desplegable de categorías dentro de la navbar */
+.navbar-gamer .dropdown-menu {
+    border: 2px solid var(--color-acento);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-gamer .dropdown-item:hover,
+.navbar-gamer .dropdown-item:focus {
+    background-color: var(--color-acento-2);
+    color: var(--color-fondo);
+}
+
+/* ---------- Carrusel de ofertas ---------- */
+#ofertas .carousel {
+    max-width: 1100px;
+    border: 2px solid var(--color-acento);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Las imágenes del carrusel llevan width/height en el HTML (evita saltos
+   de layout); height:auto permite que se encojan manteniendo la proporción */
+#ofertas .carousel-item img {
+    height: auto;
+}
+
+/* ---------- Sección de productos ---------- */
+#productos h2 {
+    color: var(--color-acento-2);
+}
+
+/* Estado de carga del catálogo (JSON local con Fetch API) */
+#estado-productos {
+    color: var(--color-texto-suave);
+}
+
+/* Tarjetas de producto (componente card de Bootstrap personalizado) */
+.card-producto {
+    background-color: var(--color-superficie);
+    border: 2px solid var(--color-acento);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--color-texto);
+}
+
+/* La tarjeta se "eleva" al pasar el mouse */
+.card-producto:hover {
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+.card-producto .card-img-top {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-producto .card-text {
+    color: var(--color-texto-suave);
+}
+
+/* Precio destacado dentro de la descripción */
+.precio {
+    color: var(--color-acento-2);
+    font-weight: bold;
+}
+
+/* Botón de acción con el color de acento del tema */
+.btn-gamer {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-gamer:hover,
+.btn-gamer:focus {
+    background-color: var(--color-acento-2);
+    border-color: var(--color-acento-2);
+    color: var(--color-fondo);
+}
+
+/* ---------- Pie de página ---------- */
+#contacto {
+    background-color: var(--color-superficie);
+    border-top: 4px solid var(--color-acento);
+}
+
+#contacto h2 {
+    color: var(--color-acento-2);
+}
+
+#contacto p {
+    color: var(--color-texto-suave);
+}
+
+.redes a {
+    color: var(--color-acento-2);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.redes a:hover {
+    color: var(--color-texto);
+    text-decoration: underline;
+}
+
+/* ---------- Interactividad (Semana 5 y 6) ---------- */
+/* Transición suave para el resaltado de tarjetas con mouseover */
+.card-producto {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estado visual aplicado desde JavaScript al pasar el mouse */
+.card-resaltada {
+    transform: translateY(-6px);
+    border-color: var(--color-acento-2);
+    box-shadow: 0 10px 24px rgba(34, 211, 238, 0.28);
+}
+
+/* Mensajes dinámicos accesibles para búsquedas, carrito y Fetch API */
+.mensaje-interaccion {
+    margin: 1rem 0 0;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-acento);
+    border-radius: 8px;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+}
+
+.mensaje-exito {
+    border-color: #22c55e;
+    color: #bbf7d0;
+}
+
+.mensaje-error {
+    border-color: #ef4444;
+    color: #fecaca;
+}
+
+/* Panel del carrito creado para mostrar elementos agregados dinámicamente */
+.carrito-panel {
+    background-color: var(--color-superficie);
+    border: 2px solid var(--color-acento);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.item-carrito {
+    background-color: transparent;
+    color: var(--color-texto);
+    border-color: rgba(124, 58, 237, 0.35);
+}
+
+#total-carrito {
+    color: var(--color-acento-2);
+}
+
+/* Tarjetas de noticias cargadas desde la API externa */
+.noticia-api .card-title {
+    color: var(--color-acento-2);
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nombre": "Nintendo Switch 2",
+    "descripcion": "La nueva consola de Nintendo con gráficos mejorados y compatibilidad con juegos de la generación anterior.",
+    "precio": 600000,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_995762-MLA99505882400_112025-O.webp",
+    "alt": "Imagen de la consola Nintendo Switch 2",
+    "categoria": "consolas"
+  },
+  {
+    "id": 2,
+    "nombre": "The Legend of Zelda: Breath of the Wild para Switch 2",
+    "descripcion": "La aventura épica de Link en un mundo abierto, ahora optimizada para Switch 2.",
+    "precio": 75000,
+    "imagen": "https://m.media-amazon.com/images/I/81sbNa0pvxL.jpg",
+    "alt": "Imagen de la portada del juego Zelda Breath of the Wild para Switch 2",
+    "categoria": "videojuegos"
+  },
+  {
+    "id": 3,
+    "nombre": "Final Fantasy VII Remake para Switch 2",
+    "descripcion": "El remake del clásico RPG de Square Enix, reimaginado con gráficos modernos.",
+    "precio": 85000,
+    "imagen": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/d6824bbd-6511-4fc6-b3cf-d6220b9aa15f.png",
+    "alt": "Imagen de la portada del juego Final Fantasy VII Remake para Switch 2",
+    "categoria": "videojuegos"
+  },
+  {
+    "id": 4,
+    "nombre": "Final Fantasy VII Rebirth para Switch 2",
+    "descripcion": "La segunda entrega de la trilogía remasterizada de Final Fantasy VII.",
+    "precio": 85000,
+    "imagen": "https://static.xtralife.com/conversions/JQC5-KX77686242-fullhd_w1920_h1080_q75-s2ffviirebirth-1770368544.webp",
+    "alt": "Imagen de la portada del juego Final Fantasy VII Rebirth para Switch 2",
+    "categoria": "videojuegos"
+  },
+  {
+    "id": 5,
+    "nombre": "Mando Pro para Switch 2",
+    "descripcion": "Control ergonómico y preciso para disfrutar al máximo de tus juegos en Switch 2.",
+    "precio": 125000,
+    "imagen": "https://www.mathogames.cl/6471-large_default/control-pro-nintendo-switch-2.jpg",
+    "alt": "Imagen del mando pro para Nintendo Switch 2",
+    "categoria": "accesorios"
+  }
+]
